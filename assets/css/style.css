@@ -6,7 +6,7 @@
     --surface: #f0f0f0;
     --line: #e6e6e6;
     --accent: #ff5619;
-    --accent-dark: #c35b00;
+    --accent-dark: #d43900;
     --redish: #FF3333;
     --rating: #FFC633;
     --radius: 14px;
@@ -43,9 +43,28 @@
     font-display: swap;
 }
 
+/* Global Scrollbar Styling */
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-dark);
+    border-radius: 10px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-dark) var(--ink);
+}
+
 /* ---------- Base ---------- */
 html {
     scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
@@ -208,8 +227,6 @@ header.is-scrolled {
     color: var(--accent);
 }
 
-
-
 /* ---------- Search ---------- */
 .navSearch {
     display: flex;
@@ -270,6 +287,7 @@ header.is-scrolled {
     border-radius: 50%;
     text-decoration: none;
     transition: background .2s, color .2s;
+    background: #f0f0f080;
 }
 
 .navLinks a:hover,
@@ -414,6 +432,59 @@ header.is-scrolled {
 .modal-backdrop.fade {
     transition: opacity .3s ease;
 }
+
+.scroll-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--accent-dark);
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.3s ease;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background: #111;
+    transform: translateY(-4px);
+}
+
+.scroll-top:focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 3px;
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+    .scroll-top {
+        transition: none;
+    }
+} */
 
 @media (min-width: 992px) and (hover: hover) {
     .navbar .dropdown:hover>.dropdown-menu {
@@ -563,7 +634,7 @@ header.is-scrolled {
 
 @media(max-width: 575.98px) {
     .section-heading {
-        font-size: 32px;
+        font-size: 30px;
         letter-spacing: 1px;
     }
 
@@ -580,6 +651,14 @@ header.is-scrolled {
         width: 34px;
         height: 34px;
         font-size: 14px;
+    }
+
+    .scroll-top {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
     }
 }
 
@@ -723,6 +802,7 @@ header.is-scrolled {
 .product-details-box {
     text-decoration: none;
     width: 300px;
+    margin-bottom: 10px;
 }
 
 .product-img-box {
@@ -1578,6 +1658,10 @@ header.is-scrolled {
         padding: 12px;
     }
 
+    .product-details-box {
+        margin-bottom: 20px;
+    }
+
     .product-img-box,
     .product-details-box {
         width: 42vw;
@@ -1588,7 +1672,7 @@ header.is-scrolled {
     }
 
     .product-details-box .product-price .discount {
-        padding: 4px 6px;
+        padding: 4px;
         font: 10px;
     }
 

@@ -85,6 +85,29 @@ $(document).on("shown.bs.modal", "#searchBox", function () {
   $(this).find("input").trigger("focus");
 });
 
+// scroll to top
+$(function () {
+  const $btn = $("#scrollTopBtn");
+
+  $(window)
+    .on("scroll", function () {
+      $btn.toggleClass("show", window.scrollY > 300);
+    })
+    .trigger("scroll");
+
+  $btn.on("click", function () {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: reduceMotion ? "instant" : "smooth",
+    });
+  });
+});
+
+// hero slider
 $(function () {
   $(".heroSlider").slick({
     dots: true,
@@ -105,6 +128,7 @@ $(function () {
   });
 });
 
+// video button
 $(function () {
   var $video = $(".video-section video");
   var $btn = $(".video-section .controls");
@@ -141,6 +165,7 @@ $(function () {
   }
 });
 
+// testimonial
 $(function () {
   $(".testimonial-slider").slick({
     slidesToShow: 1,
