@@ -1,31 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DOOZO caps: baseball, trucker and hip-hop styles. Easy 7-day returns.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DOOZO caps: baseball, trucker and hip-hop styles. Easy 7-day returns." />
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="assets/images/Icons/favicon.png">
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/Icons/favicon.png" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>DOOZO | Premium Streetwear from India</title>
     <meta name="description"
-        content="Bold streetwear from India by DOOZO. Premium streetwear and lifestyle essentials with embroidered and woven designs. Free shipping and cash on delivery across India.">
-
+        content="Bold streetwear from India by DOOZO. Premium streetwear and lifestyle essentials with embroidered and woven designs. Free shipping and cash on delivery across India." />
 </head>
 
 <body>
     <header>
-        <div class="topHeader">
+        <aside class="topHeader" aria-label="Store announcements">
             <span>Welcome to DOOZO</span>
             <span>Available at Amazon</span>
             <span>Easy 7-day returns</span>
-        </div>
+            <span>Flat 30% Off</span>
+        </aside>
 
         <nav class="navbar navbar-expand-lg" aria-label="Main">
             <div class="container">
@@ -37,56 +39,74 @@
 
                 <a class="navbar-brand" href="/"><img src="assets/images/Icons/logo.png" alt="DOOZO" /></a>
 
-                <!-- Slide-in drawer on mobile, normal menu on desktop -->
-                <div class="mobileDrawer" id="mainMenu" aria-label="Menu">
+
+                <aside class="mobileDrawer" id="mainMenu" aria-label="Mobile menu">
                     <div class="drawerHead">
                         <a class="navbar-brand m-0" href="/"><img src="assets/images/Icons/logo.png" alt="DOOZO" /></a>
                         <button type="button" class="drawerClose" id="menuClose" aria-label="Close menu">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                         </button>
                     </div>
                     <div class="drawerBody">
                         <ul class="navbar-nav mx-lg-auto">
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-                            <li class="nav-item dropdown ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="caps.html" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">Caps</a>
                                 <ul class="dropdown-menu rounded-0">
-                                    <li><a class="dropdown-item" href="baseball-cap.html">Baseball Cap</a></li>
-                                    <li><a class="dropdown-item" href="trucker-cap.html">Trucker Cap</a></li>
-                                    <li><a class="dropdown-item" href="hiphop.html">Hip-hop</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="baseball-cap.html">Baseball Cap</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="trucker-cap.html">Trucker Cap</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="hiphop.html">Hip-hop</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="orders.html">Orders</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blogs.html">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orders.html">Orders</a>
+                            </li>
                         </ul>
                         <form class="d-none d-lg-flex navSearch" role="search">
-                            <button class="btn p-0 m-0" type="submit" aria-label="Search"><i
-                                    class="fa-solid fa-magnifying-glass"></i></button>
+                            <button class="btn p-0 m-0" type="submit" aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            </button>
                             <input class="form-control ms-3 p-0 bg-transparent border-0" type="search"
                                 placeholder="Search for caps" aria-label="Search" />
                         </form>
                     </div>
-                </div>
+                </aside>
 
                 <div class="drawerScrim" id="menuScrim"></div>
 
                 <div class="d-flex align-items-center navLinks">
                     <button class="btn d-lg-none d-block p-0" type="button" data-bs-toggle="modal"
                         data-bs-target="#searchBox" aria-label="Search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     </button>
                     <a href="profile.html" aria-label="Profile">
-                        <i class="fas fa-circle-user"></i>
+                        <i class="fas fa-circle-user" aria-hidden="true"></i>
                     </a>
                     <a href="cart.html" aria-label="Cart" class="position-relative">
-                        <i class="fas fa-bag-shopping"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-dark">
                             9
-                            <span class="visually-hidden">unread messages</span>
+                            <span class="visually-hidden">Cart Items</span>
                         </span>
                     </a>
-                    <a href="wishlist.html" aria-label="Wishlist">
-                        <i class="fas fa-heart"></i>
+                    <a href="wishlist.html" aria-label="Wishlist" class="position-relative">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                            17
+                            <span class="visually-hidden">Wishlisted Items</span>
+                        </span>
                     </a>
                 </div>
             </div>
@@ -94,71 +114,698 @@
     </header>
 
     <main>
-        <div class="container">
-            <!-- Your page content goes here -->
-        </div>
+        <!-- slider section  -->
+        <section class="section-hero">
+            <div class="heroSlider mb-0">
+                <!-- Slide 1 -->
+                <div class="heroSlide">
+                    <a href="all-caps.html">
+                        <picture>
+                            <source media="(max-width: 749px)" srcset="assets/images//hero/final_pink_02-mobile.webp"
+                                width="1254" height="1254" class="w-100" />
+                            <img src="assets/images/hero/final_pink_02.webp" alt="DOOZO baseball caps" width="1726"
+                                height="911" loading="lazy" class="w-100" />
+                        </picture>
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="heroSlide">
+                    <a href="all-caps.html">
+                        <picture>
+                            <source media="(max-width: 749px)"
+                                srcset="assets/images/hero/Doozo_Banner_image_1-mobile.webp" width="900" height="900"
+                                class="w-100" />
+                            <img src="assets/images/hero/Doozo_Banner_image_1.webp" alt="DOOZO trucker caps"
+                                width="1507" height="796" loading="lazy" class="w-100" />
+                        </picture>
+                    </a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="heroSlide">
+                    <a href="all-caps.html">
+                        <picture>
+                            <source media="(max-width: 749px)" srcset="assets/images/hero/Seasson_1-mobile.webp"
+                                width="1254" height="1254" class="w-100" />
+                            <img src="assets/images/hero/Seasson_1.webp" alt="DOOZO hip-hop caps" width="1726"
+                                height="911" loading="lazy" class="w-100" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- slider section ends  -->
+        <!-- marquee area  -->
+        <section class="section-marquee">
+            <div class="marquee">
+                <div class="marqueeTrack">
+                    <div class="marqueeGroup">
+                        <span>AVAILABLE AT AMAZON</span>
+                        <span>FREE SHIPPING ON ALL ORDERS</span>
+                        <span>PREMIUM QUALITY CAPS</span>
+                        <span>EASY 7-DAY RETURNS</span>
+                        <span>SECURE CHECKOUT</span>
+                        <span>FLAT 30% OFF</span>
+                    </div>
+                    <div class="marqueeGroup" aria-hidden="true">
+                        <span>AVAILABLE AT AMAZON</span>
+                        <span>FREE SHIPPING ON ALL ORDERS</span>
+                        <span>PREMIUM QUALITY CAPS</span>
+                        <span>EASY 7-DAY RETURNS</span>
+                        <span>SECURE CHECKOUT</span>
+                        <span>FLAT 30% OFF</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- marquee area ends -->
+        <!-- product section  -->
+        <section>
+            <div class="container">
+                <h1 class="section-heading text-center mt-lg-5 mt-md-3 pt-4 pt-lg-5">
+                    Trending Now
+                </h1>
+                <div class="row">
+                    <!-- 1st product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag sale">Sale</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">4</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 2nd product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag new">New Arrival</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">3.5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 3rd product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag sale">Sale</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 4th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag new">New Arrival</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">2.5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 5th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag sale">Sale</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">4.5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 6th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag new">New Arrival</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 7th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag sale">Sale</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">2.5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <!-- 8th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="tag new">New Arrival</div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">3</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3 mt-md-4">
+                    <a href="all-caps.html" class="btn-doozo btn">View All</a>
+                </div>
+            </div>
+        </section>
+        <!-- product section ends -->
+        <!-- category area -->
+        <section class="mt-5" aria-labelledby="category-heading">
+            <div class="container categoryBox">
+                <h2 class="section-heading text-center" id="category-heading">BROWSE BY CATEGORY</h2>
+                <div class="text-center category-Sub">
+                    <h3 class="pb-2">Born on the Streets. Made for You.</h3>
+                    <p>Every DOOZO piece starts with a bold idea: a patch, a stitch, a story. Streetwear
+                        from India for
+                        people who don't follow trends. Free shipping across India.</p>
+
+                </div>
+                <div class="category-link-box">
+                    <a href="baseball-cap.html" class="category-link category-link--large" aria-label="Baseball Caps">
+                        <img src="assets/images/baseball.png" alt="baseball cap" class="category-pictures" />
+                        <span class="category-name">Baseball Caps</span>
+                        <span class="category-popup">Click to visit</span>
+                    </a>
+
+                    <a href="trucker-cap.html" class="category-link" aria-label="Trucker Caps">
+                        <img src="assets/images/Trucker.png" alt="trucker cap" class="category-pictures" />
+                        <span class="category-name">Trucker Caps</span>
+                        <span class="category-popup">Click to visit</span>
+                    </a>
+
+                    <a href="hiphop.html" class="category-link" aria-label="Hip-Hop Caps">
+                        <img src="assets/images/hiphop.png" alt="hiphop cap" class="category-pictures" />
+                        <span class="category-name">Hip-Hop Caps</span>
+                        <span class="category-popup">Click to visit</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- category area ends -->
+        <!-- video area -->
+        <section class="video-section">
+            <video src="assets/video/doozo.mp4" autoplay muted loop playsinline
+                aria-label="DOOZO promotional video"></video>
+
+            <button type="button" class="controls" aria-label="Pause video">
+                <i class="fa fa-pause" aria-hidden="true"></i>
+            </button>
+        </section>
+        <!-- video area ends-->
+        <!-- trust badges -->
+        <section class="trust-badge py-4">
+            <div class="container">
+                <h2 class="section-heading text-center">Why Choose Us</h2>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <div class="pb-3">
+                            <div class="trust-badg-box h-100 border p-3 rounded text-center shadow">
+                                <div
+                                    class="badge-icon shadow-sm d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3">
+                                    <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                                </div>
+                                <h3>Free Shipping</h3>
+                                <p>Complimentary, trackable <a href="shipping.html">shipping</a> all over India.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="pb-3">
+                            <div class="trust-badg-box h-100 border p-3 rounded text-center shadow">
+                                <div
+                                    class="badge-icon shadow-sm d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3">
+                                    <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                                </div>
+                                <h3>Easy Return</h3>
+                                <p>Hassle-free 7-day <a href="returns.html">returns</a> or exchange.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="pb-3">
+                            <div class="trust-badg-box h-100 border p-3 rounded text-center shadow">
+                                <div
+                                    class="badge-icon shadow-sm d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3">
+                                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                                </div>
+                                <h3>Secure Checkout</h3>
+                                <p>All transactions are <a href="privacy.html">Safe and encrypted</a>.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="pb-3">
+                            <div class="trust-badg-box h-100 border p-3 rounded text-center shadow">
+                                <div
+                                    class="badge-icon shadow-sm d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3">
+                                    <i class="fa-solid fa-award" aria-hidden="true"></i>
+                                </div>
+                                <h3>Premium Quality</h3>
+                                <p>Each product crafted from premium materials.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- trust badges ends -->
+        <!-- testimonials -->
+        <section class="testimonial-section position-relative">
+            <div class="container position-relative">
+                <h2 class="section-heading text-center text-light mb-4">
+                    OUR HAPPY CUSTOMERS
+                </h2>
+
+                <div class="testimonials-box position-relative">
+                    <div class="testimonial-decoration" aria-hidden="true">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+
+                    <!-- arrows get injected here by slick -->
+                    <div class="testimonial-nav"></div>
+
+                    <div class="testimonial-slider">
+                        <!-- slide 1 -->
+                        <article class="testimonial">
+                            <div class="testimonial-rating">
+                                <div class="stars" aria-label="5 out of 5 stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <span class="rating-number">5.0</span>
+                            </div>
+
+                            <p class="testimonial-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Eveniet quam, nisi veniam dolore fugit facere minima in
+                                quaerat a et harum veritatis illum dolorem maxime!
+                            </p>
+
+                            <footer class="testimonial-author">
+                                <div class="author-avatar" aria-hidden="true">J</div>
+                                <div class="author-info">
+                                    <cite class="author-name">J Doe</cite>
+                                    <span class="author-meta">
+                                        <i class="fa fa-check-circle"></i> Verified Purchase · 12
+                                        March 2026
+                                    </span>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <!-- slide 2 -->
+                        <article class="testimonial">
+                            <div class="testimonial-rating">
+                                <div class="stars" aria-label="4 out of 5 stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <span class="rating-number">4.0</span>
+                            </div>
+
+                            <p class="testimonial-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At aperiam eos eaque, hic
+                                veritatis quae suscipit provident explicabo dicta deleniti quas placeat vero repellat
+                                soluta molestias! Impedit asperiores iure recusandae? Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Obcaecati voluptas sed dolorum incidunt accusamus
+                                voluptatibus rerum, quas quisquam sunt vel a sint molestiae neque porro iure vero enim
+                                necessitatibus praesentium?
+                            </p>
+
+                            <footer class="testimonial-author">
+                                <div class="author-avatar" aria-hidden="true">A</div>
+                                <div class="author-info">
+                                    <cite class="author-name">A Smith</cite>
+                                    <span class="author-meta">
+                                        <i class="fa fa-check-circle"></i> Verified Purchase · 2
+                                        April 2026
+                                    </span>
+                                </div>
+                            </footer>
+                        </article>
+                    </div>
+                    <div class="testimonial-dots"></div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonials end -->
+        <!-- subscription area  -->
+        <section class="subscription-section bg-black">
+            <div class="container">
+                <div class="subscribe-box bg-dark">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <h2 id="newsletter-heading" class="section-heading-1 section-heading text-white">
+                                STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                            </h2>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <form aria-labelledby="newsletter-heading">
+                                <div class="subscribe-form-input">
+                                    <label for="subscribe-email" class="visually-hidden">Email address</label>
+                                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                                    <input type="email" name="email" id="subscribe-email"
+                                        class="form-control px-0 border-0 shadow-none"
+                                        placeholder="Enter your email address" autocomplete="email" required>
+                                </div>
+                                <button type="submit" class="btn-doozo btn shadow-none subscBtn bg-white">
+                                    Subscribe to Newsletter
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subscription area end -->
     </main>
 
     <footer class="siteFooter">
         <div class="container">
             <div class="row g-4 text-center text-md-start">
                 <div class="col-lg-3 footBrand text-center text-lg-start">
-                    <img src="assets/images/Icons/logo.png" alt="DOOZO" class="logo" />
+                    <img src="assets/images/Icons/white_logo.png" alt="DOOZO" class="logo" />
                     <img src="assets/images/amazon.webp" alt="available at amazon" class="amz-pic m-auto m-lg-0"
                         loading="lazy" />
                     <div class="social justify-content-center justify-content-lg-start">
-                        <a href="https://www.instagram.com/doozoindia/" target="_blank" aria-label="Instagram"><i
-                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/doozoindia/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61587192172067" target="_blank"
-                            aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3 footUl">
                     <h3 class="mb-4">Shop</h3>
-                    <ul>
-                        <li><a href="all-caps.html">All Caps</a></li>
-                        <li><a href="baseball-cap.html">Baseball Cap</a></li>
-                        <li><a href="trucker-cap.html">Trucker Cap</a></li>
-                        <li><a href="hiphop.html">Hip-hop</a></li>
-                    </ul>
+                    <nav aria-label="Shop">
+                        <ul>
+                            <li><a href="all-caps.html">All Caps</a></li>
+                            <li><a href="baseball-cap.html">Baseball Cap</a></li>
+                            <li><a href="trucker-cap.html">Trucker Cap</a></li>
+                            <li><a href="hiphop.html">Hip-hop</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="col-md-4 col-lg-3 footUl">
                     <h3 class="mb-4">Support</h3>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="shipping.html">Shipping Policy</a></li>
-                        <li><a href="returns.html">Returns Policy</a></li>
-                        <li><a href="orders.html">Track Your Order</a></li>
-                    </ul>
+                    <nav aria-label="Support">
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="shipping.html">Shipping Policy</a></li>
+                            <li><a href="returns.html">Returns Policy</a></li>
+                            <li><a href="orders.html">Track Your Order</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="col-md-4 col-lg-3 footUl">
                     <h3 class="mb-4">Company</h3>
-                    <ul>
-                        <li><a href="about.html">About DOOZO</a></li>
-                        <li><a href="blogs.html">Blogs</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                    </ul>
+                    <nav aria-label="Company">
+                        <ul>
+                            <li><a href="about.html">About DOOZO</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="footBottom">&copy; <span class="currentYear"></span> <span class="brand fw-bold">DOOZO</span>.
-                All
-                rights reserved.</div>
+            <div class="footBottom">
+                &copy; <span class="currentYear"></span>
+                <span class="brand fw-bold">DHIYA FASHION</span>. All rights reserved.
+            </div>
         </div>
     </footer>
 
-    <div class="modal fade" id="searchBox" tabindex="-1" aria-label="Search" aria-hidden="true">
+    <div class="modal fade" id="searchBox" tabindex="-1" aria-labelledby="searchBoxLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0 pb-0">
-                    <h1 class="modal-title fs-5" id="searchBoxLabel">Search for caps</h1>
+                    <h2 class="modal-title fs-5" id="searchBoxLabel">
+                        Search for caps
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form class="navSearch mx-0" role="search">
-                        <button class="btn p-0 m-0" type="submit" aria-label="Search"><i
-                                class="fa-solid fa-magnifying-glass"></i></button>
+                        <button class="btn p-0 m-0" type="submit" aria-label="Search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                         <input class="form-control ms-3 p-0 bg-transparent border-0" type="search"
                             placeholder="Type here..." aria-label="Search" />
                     </form>
@@ -169,6 +816,7 @@
 
     <script src="assets/js/jQuery.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

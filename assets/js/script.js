@@ -27,7 +27,7 @@ $(document).ready(function () {
 // "Come back" tab title
 var originalTitle = document.title;
 var titleInterval;
-var toggleMessages = ["🧢 Come back!", "Your DOOZO style is waiting."];
+var toggleMessages = ["🧢 Come back!", "Your DOOZO style is waiting 😎"];
 var messageIndex = 0;
 
 document.addEventListener("visibilitychange", function () {
@@ -56,6 +56,7 @@ document.addEventListener("visibilitychange", function () {
     scrim.classList.toggle("is-open", open);
     document.body.classList.toggle("menu-open", open);
     openBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    openBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     if (open) closeBtn.focus();
     else openBtn.focus({ preventScroll: true });
   }
@@ -82,4 +83,82 @@ document.addEventListener("visibilitychange", function () {
 // Focus the search box when the mobile search modal opens
 $(document).on("shown.bs.modal", "#searchBox", function () {
   $(this).find("input").trigger("focus");
+});
+
+$(function () {
+  $(".heroSlider").slick({
+    dots: true,
+    arrows: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 750,
+        settings: { arrows: false },
+      },
+    ],
+  });
+});
+
+$(function () {
+  var $video = $(".video-section video");
+  var $btn = $(".video-section .controls");
+  var $icon = $btn.find("i");
+  var video = $video.get(0);
+
+  // keep the icon in sync with the real video state
+  function showPause() {
+    $icon.removeClass("fa-play").addClass("fa-pause");
+    $btn.attr("aria-label", "Pause video");
+  }
+
+  function showPlay() {
+    $icon.removeClass("fa-pause").addClass("fa-play");
+    $btn.attr("aria-label", "Play video");
+  }
+
+  $video.on("play playing", showPause);
+  $video.on("pause", showPlay);
+
+  // toggle on button click
+  $btn.on("click", function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+  // if the browser blocks autoplay, show the play icon instead
+  var attempt = video.play();
+  if (attempt !== undefined) {
+    attempt.catch(showPlay);
+  }
+});
+
+$(function () {
+  $(".testimonial-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    fade: true,
+    speed: 600,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    pauseOnHover: true,
+    adaptiveHeight: true,
+    dots: true,
+    arrows: true,
+    appendArrows: ".testimonial-nav",
+    appendDots: ".testimonial-dots",
+    prevArrow:
+      '<button type="button" class="slick-prev testimonial-arrow" aria-label="Previous review"><i class="fa fa-angle-left"></i></button>',
+    nextArrow:
+      '<button type="button" class="slick-next testimonial-arrow" aria-label="Next review"><i class="fa fa-angle-right"></i></button>',
+  });
 });
