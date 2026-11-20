@@ -149,6 +149,10 @@ header.is-scrolled {
     padding: 0;
 }
 
+.navbar .container-fluid {
+    padding: 0 80px;
+}
+
 .navbar-brand {
     margin-right: 32px;
 }
@@ -277,6 +281,8 @@ header.is-scrolled {
     gap: 4px !important;
 }
 
+.mob-nav-box a,
+.mob-nav-box button,
 .navLinks button,
 .navLinks a {
     display: inline-flex;
@@ -291,9 +297,11 @@ header.is-scrolled {
     border-radius: 50%;
     text-decoration: none;
     transition: background .2s, color .2s;
-    background: #f0f0f080;
+    background: #f0f0f0dc;
 }
 
+.mob-nav-box a:hover,
+.mob-nav-box button:hover,
 .navLinks a:hover,
 .navLinks button:hover {
     background: var(--surface);
@@ -317,7 +325,22 @@ header.is-scrolled {
     display: none;
 }
 
+.navbar-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, .06);
+}
 
+.mob-nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
 
 /* ---------- Search modal ---------- */
 #searchBox .modal-content {
@@ -409,7 +432,7 @@ header.is-scrolled {
 .amz-pic {
     max-width: 200px;
     display: block;
-    margin: 15px 0;
+    width: 100%;
 }
 
 .brand,
@@ -490,6 +513,18 @@ header.is-scrolled {
     }
 } */
 
+@media(min-width:1560px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1520px;
+    }
+}
+
 @media (min-width: 992px) and (hover: hover) {
     .navbar .dropdown:hover>.dropdown-menu {
         display: block;
@@ -505,6 +540,11 @@ header.is-scrolled {
         -webkit-backdrop-filter: none;
         backdrop-filter: none;
         background: #fff;
+    }
+
+    .navbar .container-fluid {
+        padding: 0 12px;
+        max-width: 768px;
     }
 
     .navbar>.container {
@@ -633,6 +673,13 @@ header.is-scrolled {
         width: 100%;
         background: var(--ink);
         border-radius: 2px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .navbar .container-fluid {
+        max-width: 540px;
     }
 }
 
@@ -925,13 +972,40 @@ header.is-scrolled {
     color: #fff;
     webkit-clip-path: polygon(0% 0%, 100% 0%, calc(100% - 10px) 50%, 100% 100%, 0% 100%) !important;
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 10px) 50%, 100% 100%, 0% 100%) !important;
+    transform: translateX(-5px);
 }
 
-.tag.sale {
+
+
+.sale span {
+    position: absolute;
+    top: 44px;
+    left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 8px solid #d80000;
+    width: 5px;
+    height: 8px;
+    z-index: 1;
+}
+
+.new span {
+    position: absolute;
+    top: 44px;
+    left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 8px solid #008f13;
+    width: 5px;
+    height: 8px;
+    z-index: 1;
+}
+
+.sale .tag {
     background-color: #d80000;
 }
 
-.tag.new {
+.new .tag {
     background-color: #008f13;
 }
 
@@ -1000,7 +1074,7 @@ header.is-scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right center;
+    object-position: right top;
     display: block;
     transition: transform 0.5s ease;
 }
@@ -1077,23 +1151,13 @@ header.is-scrolled {
     height: auto;
 }
 
-/* dark overlay */
-.video-section:after {
-    position: absolute;
-    content: '';
-    background: radial-gradient(#000, transparent);
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-}
+
 
 /* play / pause button */
 .video-section .controls {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    bottom: 0;
+    left: 100px;
     transform: translate(-50%, -50%);
     width: 76px;
     height: 76px;
@@ -1546,9 +1610,17 @@ header.is-scrolled {
     .section-heading-1 {
         font-size: 28px;
     }
+
+    .scroll-top {
+        bottom: 60px;
+    }
 }
 
 @media(max-width:767.98px) {
+    .siteFooter .social {
+        margin-top: 0;
+    }
+
     .product-box {
         justify-content: space-between;
     }
@@ -1652,6 +1724,7 @@ header.is-scrolled {
 @media(max-width:575.98px) {
     .tag {
         font-size: 12px;
+        top: 8px;
     }
 
     .product-details-box .product-price {
@@ -1709,9 +1782,19 @@ header.is-scrolled {
         width: 56px;
         height: 56px;
         font-size: 22px;
+        left: 50px;
     }
 
     .section-heading-1 {
         font-size: 24px;
+    }
+
+    .product-details-box .cart-btn {
+        display: none;
+    }
+
+    .new span,
+    .sale span {
+        top: 31px;
     }
 }

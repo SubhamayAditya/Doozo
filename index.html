@@ -29,14 +29,8 @@
             <span>Flat 30% Off</span>
         </aside>
 
-        <nav class="navbar navbar-expand-lg" aria-label="Main">
-            <div class="container">
-                <button class="navbar-toggler border-0" type="button" id="menuOpen" aria-controls="mainMenu"
-                    aria-expanded="false" aria-label="Open menu">
-                    <span class="hamburger"><span class="line"></span><span class="line"></span><span
-                            class="line"></span></span>
-                </button>
-
+        <nav class="navbar navbar-expand-lg bg-light" aria-label="Main">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="/"><img src="assets/images/Icons/logo.png" alt="DOOZO" /></a>
 
 
@@ -91,19 +85,48 @@
                         data-bs-target="#searchBox" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     </button>
-                    <a href="profile.html" aria-label="Profile">
+                    <a href="profile.html" aria-label="Profile" class="d-lg-flex d-none">
                         <i class="fas fa-circle-user" aria-hidden="true"></i>
                     </a>
-                    <a href="cart.html" aria-label="Cart" class="position-relative">
+                    <a href="cart.html" aria-label="Cart" class="position-relative d-lg-flex d-none">
                         <i class="fas fa-bag-shopping" aria-hidden="true"></i>
                         <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-dark">
                             9
                             <span class="visually-hidden">Cart Items</span>
                         </span>
                     </a>
-                    <a href="wishlist.html" aria-label="Wishlist" class="position-relative">
+                    <a href="wishlist.html" aria-label="Wishlist" class="position-relative d-lg-flex d-none">
                         <i class="fas fa-heart" aria-hidden="true"></i>
                         <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                            17
+                            <span class="visually-hidden">Wishlisted Items</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar-mobile border-top d-lg-none bg-light">
+            <div class="container">
+                <div class="mob-nav-box">
+                    <button class="navbar-toggler border-0" type="button" id="menuOpen" aria-controls="mainMenu"
+                        aria-expanded="false" aria-label="Open menu">
+                        <span class="hamburger"><span class="line"></span><span class="line"></span><span
+                                class="line"></span></span>
+                    </button>
+                    <a href="profile.html" aria-label="Profile">
+                        <i class="fas fa-circle-user" aria-hidden="true"></i>
+                    </a>
+                    <a href="cart.html" aria-label="Cart" class="position-relative">
+                        <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-black">
+                            9
+                            <span class="visually-hidden">Cart Items</span>
+                        </span>
+                    </a>
+                    <a href="wishlist.html" aria-label="Wishlist" class="position-relative">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-black">
                             17
                             <span class="visually-hidden">Wishlisted Items</span>
                         </span>
@@ -183,14 +206,19 @@
         <!-- product section  -->
         <section>
             <div class="container">
-                <h1 class="section-heading text-center mt-lg-5 mt-md-3 pt-4 pt-lg-5">
+                <h1 class="section-heading text-center mt-lg-5 mt-3 mb-5">
                     Trending Now
                 </h1>
                 <div class="row justify-content-center">
                     <!-- 1st product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag sale">Sale</div>
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -230,7 +258,10 @@
                     <!-- 2nd product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag new">New Arrival</div>
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -270,7 +301,12 @@
                     <!-- 3rd product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag sale">Sale</div>
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -310,7 +346,10 @@
                     <!-- 4th product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag new">New Arrival</div>
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -350,7 +389,12 @@
                     <!-- 5th product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag sale">Sale</div>
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -390,7 +434,10 @@
                     <!-- 6th product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag new">New Arrival</div>
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -430,7 +477,12 @@
                     <!-- 7th product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag sale">Sale</div>
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -469,7 +521,10 @@
                     <!-- 8th product -->
                     <div class="col-6 col-md-4 col-lg-3 product-box">
                         <article class="product-details-box position-relative">
-                            <div class="tag new">New Arrival</div>
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
                             <div class="product-img-box overflow-hidden position-relative">
                                 <a href="product.html">
                                     <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
@@ -737,20 +792,9 @@
 
     <footer class="siteFooter">
         <div class="container">
-            <div class="row g-4 text-center text-md-start">
-                <div class="col-lg-3 footBrand text-center text-lg-start">
-                    <img src="assets/images/Icons/white_logo.png" alt="DOOZO" class="logo" />
-                    <img src="assets/images/amazon.webp" alt="available at amazon" class="amz-pic m-auto m-lg-0"
-                        loading="lazy" />
-                    <div class="social justify-content-center justify-content-lg-start">
-                        <a href="https://www.instagram.com/doozoindia/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61587192172067" target="_blank"
-                            rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
-                                aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-3 footUl">
+            <div class="row g-4 ">
+
+                <div class="col-md-4 col-lg-3 col-6 footUl text-start text-md-start">
                     <h3 class="mb-4">Shop</h3>
                     <nav aria-label="Shop">
                         <ul>
@@ -761,7 +805,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-md-4 col-lg-3 footUl">
+                <div class="col-md-4 col-lg-3 col-6 footUl text-end text-md-center text-lg-start">
                     <h3 class="mb-4">Support</h3>
                     <nav aria-label="Support">
                         <ul>
@@ -773,7 +817,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-md-4 col-lg-3 footUl">
+                <div class="col-md-4 col-lg-3 col-6 footUl text-start text-lg-start text-md-end">
                     <h3 class="mb-4">Company</h3>
                     <nav aria-label="Company">
                         <ul>
@@ -783,6 +827,25 @@
                             <li><a href="terms.html">Terms & Conditions</a></li>
                         </ul>
                     </nav>
+                </div>
+                <div class="col-lg-3 col-md-12 col-6 footBrand text-lg-start text-md-center text-end">
+                    <a href="/">
+                        <img src="assets/images/Icons/white_logo.png" alt="DOOZO" class="logo" />
+                    </a>
+                    <div>
+                        <a href="https://www.amazon.in/s?rh=n%3A1571271031%2Cp_4%3ADOOZO&ref=bl_sl_s_ap_web_1571271031"
+                            class="d-inline-block">
+                            <img src="assets/images/amazon.webp" alt="available at amazon"
+                                class="amz-pic m-md-auto m-lg-0s" loading="lazy" />
+                        </a>
+                    </div>
+                    <div class="social justify-content-end justify-content-md-center justify-content-lg-start">
+                        <a href="https://www.instagram.com/doozoindia/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587192172067" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footBottom">
