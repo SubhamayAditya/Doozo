@@ -128,14 +128,18 @@ $(function () {
   });
 });
 
-// video button
+// Video button
 $(function () {
   var $video = $(".video-section video");
   var $btn = $(".video-section .controls");
-  var $icon = $btn.find("i");
-  var video = $video.get(0);
 
-  // keep the icon in sync with the real video state
+  // Check if video and button exist
+  if (!$video.length || !$btn.length) return;
+
+  var video = $video.get(0);
+  var $icon = $btn.find("i");
+
+  // Keep icon in sync with video state
   function showPause() {
     $icon.removeClass("fa-play").addClass("fa-pause");
     $btn.attr("aria-label", "Pause video");
@@ -146,10 +150,11 @@ $(function () {
     $btn.attr("aria-label", "Play video");
   }
 
+  // Video events
   $video.on("play playing", showPause);
-  $video.on("pause", showPlay);
+  $video.on("pause ended", showPlay);
 
-  // toggle on button click
+  // Toggle video on button click
   $btn.on("click", function () {
     if (video.paused) {
       video.play();
@@ -157,12 +162,6 @@ $(function () {
       video.pause();
     }
   });
-
-  // if the browser blocks autoplay, show the play icon instead
-  var attempt = video.play();
-  if (attempt !== undefined) {
-    attempt.catch(showPlay);
-  }
 });
 
 // testimonial
@@ -185,5 +184,29 @@ $(function () {
       '<button type="button" class="slick-prev testimonial-arrow" aria-label="Previous review"><i class="fa fa-angle-left"></i></button>',
     nextArrow:
       '<button type="button" class="slick-next testimonial-arrow" aria-label="Next review"><i class="fa fa-angle-right"></i></button>',
+  });
+});
+
+// shorting Icon
+$(document).ready(function () {
+  $("#productShort").on("change", function () {
+    const selectedValue = $(this).val();
+    const sortIcon = $("#sortIcon");
+
+    const icons = {
+      "": "fa-arrow-down-short-wide",
+      "a-z": "fa-arrow-down-a-z",
+      "z-a": "fa-arrow-down-z-a",
+      priceHL: "fa-arrow-down-wide-short",
+      priceLH: "fa-arrow-up-wide-short",
+    };
+
+    // Remove previous icon classes
+    sortIcon.removeClass(
+      "fa-arrow-down-short-wide fa-arrow-down-a-z fa-arrow-down-z-a fa-arrow-down-wide-short fa-arrow-up-wide-short",
+    );
+
+    // Add selected icon
+    sortIcon.addClass(icons[selectedValue] || "fa-arrow-down-short-wide");
   });
 });

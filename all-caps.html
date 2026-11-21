@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DOOZO caps: baseball, trucker and hip-hop styles. Easy 7-day returns." />
+
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/Icons/favicon.png" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>DOOZO | Premium Streetwear from India</title>
+    <meta name="description"
+        content="Bold streetwear from India by DOOZO. Premium streetwear and lifestyle essentials with embroidered and woven designs. Free shipping and cash on delivery across India." />
+</head>
+
+<body>
+    <header>
+        <aside class="topHeader" aria-label="Store announcements">
+            <span>Welcome to DOOZO</span>
+            <span>Available at Amazon</span>
+            <span>Easy 7-day returns</span>
+            <span>Flat 30% Off</span>
+        </aside>
+
+        <nav class="navbar navbar-expand-lg bg-light" aria-label="Main">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="assets/images/Icons/logo.png" alt="DOOZO" /></a>
+
+
+                <aside class="mobileDrawer" id="mainMenu" aria-label="Mobile menu">
+                    <div class="drawerHead">
+                        <a class="navbar-brand m-0" href="/"><img src="assets/images/Icons/logo.png" alt="DOOZO" /></a>
+                        <button type="button" class="drawerClose" id="menuClose" aria-label="Close menu">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="drawerBody">
+                        <ul class="navbar-nav mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="all-caps.html" role="button" data-bs-toggle=""
+                                    aria-expanded="false">Caps</a>
+                                <ul class="dropdown-menu rounded-0">
+                                    <li>
+                                        <a class="dropdown-item" href="all-caps.html">Baseball Cap</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="all-caps.html">Trucker Cap</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="all-caps.html">Hip-hop</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blogs.html">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="orders.html">Orders</a>
+                            </li>
+                        </ul>
+                        <form class="d-none d-lg-flex navSearch" role="search">
+                            <button class="btn p-0 m-0" type="submit" aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            </button>
+                            <input class="form-control ms-3 p-0 bg-transparent border-0" type="search"
+                                placeholder="Search for caps" aria-label="Search" />
+                        </form>
+                    </div>
+                </aside>
+
+                <div class="drawerScrim" id="menuScrim"></div>
+
+                <div class="d-flex align-items-center navLinks">
+                    <button class="btn d-lg-none d-block p-0" type="button" data-bs-toggle="modal"
+                        data-bs-target="#searchBox" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    </button>
+                    <a href="profile.html" aria-label="Profile" class="d-lg-flex d-none">
+                        <i class="fas fa-circle-user" aria-hidden="true"></i>
+                    </a>
+                    <a href="cart.html" aria-label="Cart" class="position-relative d-lg-flex d-none">
+                        <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                            9
+                            <span class="visually-hidden">Cart Items</span>
+                        </span>
+                    </a>
+                    <a href="wishlist.html" aria-label="Wishlist" class="position-relative d-lg-flex d-none">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                            17
+                            <span class="visually-hidden">Wishlisted Items</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar-mobile border-top d-lg-none bg-light">
+            <div class="container">
+                <div class="mob-nav-box">
+                    <button class="navbar-toggler border-0" type="button" id="menuOpen" aria-controls="mainMenu"
+                        aria-expanded="false" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <a href="/" aria-label="Home">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    </a>
+                    <a href="cart.html" aria-label="Cart" class="position-relative">
+                        <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-black">
+                            9
+                            <span class="visually-hidden">Cart Items</span>
+                        </span>
+                    </a>
+                    <a href="wishlist.html" aria-label="Wishlist" class="position-relative">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-black">
+                            17
+                            <span class="visually-hidden">Wishlisted Items</span>
+                        </span>
+                    </a>
+                    <a href="profile.html" aria-label="Profile">
+                        <i class="fas fa-circle-user" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="-mb-1">
+        <!-- breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/">
+                                <i class="fa-regular fa-house"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">All Products</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- breadcrumb end -->
+        <!-- product section  -->
+        <section class="mb-4 productAreaBox">
+            <div class="container">
+                <h1 class="section-heading text-center mb-3">
+                    All products
+                </h1>
+                <p class="w-lg-50 text-center mx-auto">
+                    Explore DOOZO® baseball caps, designed for everyday streetwear. Each cap is made from premium
+                    cotton
+                    twill, cotton or suede with an embroidered or woven patch design, a curved visor and an
+                    adjustable
+                    strap for a comfortable fit. Every cap comes with a stitching warranty, free shipping and cash
+                    on
+                    delivery across India.
+                </p>
+                <div
+                    class="product-short-box my-3 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-md-between gap-3 gap-md-0">
+                    <div class="showing">Showing: <span>1-10 of 100 Items</span></div>
+                    <div class="sort d-flex align-items-center gap-2">
+                        <label for="productShort">
+                            <i class="fa-solid fa-arrow-down-short-wide" id="sortIcon"></i>
+                        </label>
+
+                        <select class="form-select form-select-sm" aria-label="Sort products" id="productShort">
+                            <option value="" selected>Select</option>
+                            <option value="a-z">Alphabetically A-Z</option>
+                            <option value="z-a">Alphabetically Z-A</option>
+                            <option value="priceHL">Price High to Low</option>
+                            <option value="priceLH">Price Low to High</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- 1st product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">4</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 2nd product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">4</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 3rd product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 4th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">3</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 5th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 6th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">5</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 7th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="sale">
+                                <div class="tag">
+                                    Sale
+                                </div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">3</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <!-- 8th product -->
+                    <div class="col-6 col-md-4 col-lg-3 product-box">
+                        <article class="product-details-box position-relative">
+                            <div class="new">
+                                <div class="tag">New Arrival</div>
+                                <span></span>
+                            </div>
+                            <div class="product-img-box overflow-hidden position-relative">
+                                <a href="product.html">
+                                    <img src="assets/images/products/Rockstar Trucker/Rockstar_02.png"
+                                        alt="Rockstar Trucker" class="product-img w-100 h-100 object-fit-contain"
+                                        loading="lazy" width="300" height="300" />
+                                </a>
+                                <div class="cart-btn">
+                                    <a href="cart.html" class="add-to-cart">
+                                        <i class="fa fa-bag-shopping"></i>
+                                        Add to bag
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="product.html" class="product-link">
+                                <h3 class="product-name mt-3">Rockstar Trucker</h3>
+                                <div class="reviews-box d-flex align-items-center my-2">
+                                    <div class="product-rating" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="product-rating-number text-black-50">
+                                        <span class="text-black">3</span> / 5
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="new-price text-dark">₹899</span>
+                                    <span class="old-price">₹1,299</span>
+                                    <span class="discount">30% OFF</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- product section ends -->
+
+        <!-- subscription area  -->
+        <section class="subscription-section bg-black">
+            <div class="container">
+                <div class="subscribe-box bg-dark">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <h2 id="newsletter-heading" class="section-heading-1 section-heading text-white">
+                                STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                            </h2>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <form aria-labelledby="newsletter-heading">
+                                <div class="subscribe-form-input">
+                                    <label for="subscribe-email" class="visually-hidden">Email address</label>
+                                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                                    <input type="email" name="email" id="subscribe-email"
+                                        class="form-control px-0 border-0 shadow-none"
+                                        placeholder="Enter your email address" autocomplete="email" required>
+                                </div>
+                                <button type="submit" class="btn-doozo btn shadow-none subscBtn bg-white">
+                                    Subscribe to Newsletter
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subscription area end -->
+    </main>
+
+    <footer class="siteFooter">
+        <div class="container">
+            <div class="row g-4 ">
+                <div class="col-md-4 col-lg-3 col-6 footUl text-start text-md-start">
+                    <h3 class="mb-4">Shop</h3>
+                    <nav aria-label="Shop">
+                        <ul>
+                            <li><a href="all-caps.html">All Caps</a></li>
+                            <li><a href="baseball-cap.html">Baseball Cap</a></li>
+                            <li><a href="trucker-cap.html">Trucker Cap</a></li>
+                            <li><a href="hiphop.html">Hip-hop</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 col-lg-3 col-6 footUl text-end text-md-center text-lg-start">
+                    <h3 class="mb-4">Support</h3>
+                    <nav aria-label="Support">
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="shipping.html">Shipping Policy</a></li>
+                            <li><a href="returns.html">Returns Policy</a></li>
+                            <li><a href="orders.html">Track Your Order</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 col-lg-3 col-6 footUl text-start text-lg-start text-md-end">
+                    <h3 class="mb-4">Company</h3>
+                    <nav aria-label="Company">
+                        <ul>
+                            <li><a href="about.html">About DOOZO</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-12 col-6 footBrand text-lg-start text-md-center text-end">
+                    <a href="/">
+                        <img src="assets/images/Icons/white_logo.png" alt="DOOZO" class="logo" />
+                    </a>
+                    <div>
+                        <a target="_blank"
+                            href="https://www.amazon.in/s?rh=n%3A1571271031%2Cp_4%3ADOOZO&ref=bl_sl_s_ap_web_1571271031"
+                            class="d-inline-block">
+                            <img src="assets/images/amazon.webp" alt="available at amazon"
+                                class="amz-pic m-md-auto m-lg-0s" loading="lazy" />
+                        </a>
+                    </div>
+                    <div class="social justify-content-end justify-content-md-center justify-content-lg-start">
+                        <a href="https://www.instagram.com/doozoindia/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587192172067" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footBottom">
+                <div>
+                    <ul class="paymentUl d-flex align-items-center justify-content-center g-3 mb-2" role="list">
+                        <li class="m-0 p-1">
+                            <svg class="icon icon--full-color" xmlns="http://www.w3.org/2000/svg" role="img"
+                                viewBox="0 0 38 24" width="38" height="24" fill="none"
+                                aria-labelledby="pi-american_express">
+                                <title id="pi-american_express">American Express</title>
+                                <rect x=".5" y=".5" width="37" height="23" rx="2.5" stroke="#000" stroke-opacity=".07"
+                                    fill="none"></rect>
+                                <path
+                                    d="M35 0H3C1.3 0 0 1.3 0 3V21C0 22.7 1.4 24 3 24H35C36.7 24 38 22.7 38 21V3C38 1.3 36.6 0 35 0Z"
+                                    fill="#0071CE"
+                                    style="fill:#0071CE;fill:color(display-p3 0.0000 0.4431 0.8078);fill-opacity:1;">
+                                </path>
+                                <path
+                                    d="M3 0.5H35C36.3348 0.5 37.5 1.58692 37.5 3V21C37.5 22.4239 36.4239 23.5 35 23.5H3C1.66524 23.5 0.5 22.4131 0.5 21V3C0.5 1.57614 1.57614 0.5 3 0.5Z"
+                                    stroke="black" stroke-opacity="0.07" style="stroke:black;stroke-opacity:0.07;">
+                                </path>
+                                <path
+                                    d="M25.8662 6.33203V3H31L31.8662 5.5332L32.7334 3H37V14.2002H36.7998L34.8672 16.2656L36.7998 18.3594H37V21.2666H33.5996L31.9336 19.3994L30.2002 21.2666H19.4668V12.666H16L20.2666 3H24.4004L25.8662 6.33203ZM20.5996 20.2656H27V18.5322H22.666V17.3994H26.8662V15.666H22.666V14.5322H27V12.7988H20.5996V20.2656ZM30.5332 16.5322L27 20.2656H29.5996L31.8662 17.8662L34.0664 20.2656H36.7324L33.1992 16.4658L36.7324 12.7988H34.1328L31.8662 15.1992L29.7324 12.7988H27L30.5332 16.5322ZM17.666 11.7324H19.9326L20.5332 10.1992H23.999L24.666 11.7324H26.999L23.666 4.19922H20.999L17.666 11.7324ZM33.5996 4.19922L31.9326 8.86621L30.1992 4.19922H27V11.666H29.0664V6.39941L31 11.666H32.7998L34.7324 6.39941V11.666H36.7324V4.13281L33.5996 4.19922ZM23.2656 8.46582H21.2656L22.2656 5.99902L23.2656 8.46582Z"
+                                    fill="white" style="fill:white;fill-opacity:1;"></path>
+                            </svg>
+
+                        </li>
+                        <li class="m-0 p-1">
+                            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
+                                role="img" width="38" height="24" aria-labelledby="pi-diners_club">
+                                <title id="pi-diners_club">Diners Club</title>
+                                <path opacity=".07"
+                                    d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                </path>
+                                <path
+                                    d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z"
+                                    fill="#3086C8"></path>
+                            </svg>
+                        </li>
+                        <li class="m-0 p-1">
+                            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
+                                width="38" height="24" role="img" aria-labelledby="pi-maestro">
+                                <title id="pi-maestro">Maestro</title>
+                                <path opacity=".07"
+                                    d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32">
+                                </path>
+                                <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                                <circle fill="#00A2E5" cx="23" cy="12" r="7"></circle>
+                                <path fill="#7375CF"
+                                    d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="m-0 p-1">
+                            <svg class="icon icon--full-color" xmlns="http://www.w3.org/2000/svg" role="img"
+                                viewBox="0 0 38 24" width="38" height="24" fill="none" aria-labelledby="pi-master">
+                                <title id="pi-master">Mastercard</title>
+                                <rect x=".5" y=".5" width="37" height="23" rx="2.5" stroke="#000" stroke-opacity=".07"
+                                    fill="none"></rect>
+                                <path
+                                    d="M35 0H3C1.3 0 0 1.3 0 3V21C0 22.7 1.4 24 3 24H35C36.7 24 38 22.7 38 21V3C38 1.3 36.6 0 35 0Z"
+                                    fill="#1C1C1C"
+                                    style="fill:#1C1C1C;fill:color(display-p3 0.1098 0.1098 0.1098);fill-opacity:1;">
+                                </path>
+                                <path
+                                    d="M35 1C36.1 1 37 1.9 37 3V21C37 22.1 36.1 23 35 23H3C1.9 23 1 22.1 1 21V3C1 1.9 1.9 1 3 1H35Z"
+                                    fill="#232323"
+                                    style="fill:#232323;fill:color(display-p3 0.1373 0.1373 0.1373);fill-opacity:1;">
+                                </path>
+                                <path
+                                    d="M14.6364 19.2727C18.8538 19.2727 22.2727 15.8538 22.2727 11.6364C22.2727 7.41892 18.8538 4 14.6364 4C10.4189 4 7 7.41892 7 11.6364C7 15.8538 10.4189 19.2727 14.6364 19.2727Z"
+                                    fill="#EB001B"
+                                    style="fill:#EB001B;fill:color(display-p3 0.9216 0.0000 0.1059);fill-opacity:1;">
+                                </path>
+                                <path
+                                    d="M23.3637 19.2727C27.5811 19.2727 31 15.8538 31 11.6364C31 7.41892 27.5811 4 23.3637 4C19.1462 4 15.7273 7.41892 15.7273 11.6364C15.7273 15.8538 19.1462 19.2727 23.3637 19.2727Z"
+                                    fill="#F79E1B"
+                                    style="fill:#F79E1B;fill:color(display-p3 0.9686 0.6196 0.1059);fill-opacity:1;">
+                                </path>
+                                <path
+                                    d="M22.2727 11.6362C22.2727 9.01797 20.9637 6.72706 19 5.41797C17.0364 6.83615 15.7273 9.12706 15.7273 11.6362C15.7273 14.1452 17.0364 16.5452 19 17.8543C20.9637 16.5452 22.2727 14.2543 22.2727 11.6362Z"
+                                    fill="#FF5F00"
+                                    style="fill:#FF5F00;fill:color(display-p3 1.0000 0.3725 0.0000);fill-opacity:1;">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li class="m-0 p-1">
+                            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
+                                width="38" height="24" role="img" aria-labelledby="pi-rupay">
+                                <title id="pi-rupay">RuPay</title>
+                                <g fill="none" fill-rule="evenodd">
+                                    <rect stroke-opacity=".07" stroke="#000" fill="#FFF" x=".5" y=".5" width="37"
+                                        height="23" rx="3"></rect>
+                                    <path fill="#097A44" d="M32 15.77l2-7.41 2 3.82z"></path>
+                                    <path fill="#F46F20" d="M30.76 15.79l2-7.4 2 3.82z"></path>
+                                    <path
+                                        d="M20.67 8.2a2 2 0 0 0-1.56-.56h-3l-1.95 6.81h1.75l.66-2.31h1.23a3.4 3.4 0 0 0 1.9-.5 2.93 2.93 0 0 0 1.12-1.72 1.77 1.77 0 0 0-.15-1.72zm-3.21.94h1.12a.76.76 0 0 1 .55.15c.11.11.07.35 0 .53a1.08 1.08 0 0 1-.4.62 1.21 1.21 0 0 1-.7.2H17l.46-1.5zM9.14 9a1.64 1.64 0 0 0-.2-.61 1.3 1.3 0 0 0-.58-.53 2.75 2.75 0 0 0-1.08-.18H4l-2 6.75h1.73l.72-2.52H5.7c.47 0 .58.1.6.13.02.03.09.15 0 .65l-.16.6a3.35 3.35 0 0 0-.11.59v.55h1.79l.12-.43-.11-.08s-.07-.05-.06-.2c.027-.19.07-.377.13-.56l.1-.42a2.14 2.14 0 0 0 .1-1.11.88.88 0 0 0-.26-.41 2 2 0 0 0 .68-.54 2.79 2.79 0 0 0 .53-1c.07-.22.101-.45.09-.68zm-1.86.83a.84.84 0 0 1-.5.6 1.79 1.79 0 0 1-.64.09H4.86l.38-1.33h1.43a1.1 1.1 0 0 1 .53.09c.05 0 .21.07.08.5v.05zm4.9 2.17a2.11 2.11 0 0 1-.3.67 1 1 0 0 1-.87.43c-.34 0-.36-.14-.38-.2a1.24 1.24 0 0 1 .07-.52l.89-3.11H9.9l-.86 3a3 3 0 0 0-.15 1.32c.08.42.4.91 1.41.91.247.004.493-.03.73-.1a2.51 2.51 0 0 0 .6-.29l-.08.3h1.62l1.47-5.13H13L12.18 12zm12.93 1.1l.63-2.18c.24-.83-.07-1.21-.37-1.39A2.75 2.75 0 0 0 24 9.2a2.87 2.87 0 0 0-2 .68 2.75 2.75 0 0 0-.69 1.1l-.09.26h1.61v-.11a1.15 1.15 0 0 1 .25-.37.84.84 0 0 1 .56-.17.89.89 0 0 1 .46.08v.18c0 .06 0 .15-.25.23a2.13 2.13 0 0 1-.48.1l-.44.05a4 4 0 0 0-1.25.32c-.57.271-.99.78-1.15 1.39a1.25 1.25 0 0 0 .17 1.22c.289.307.7.468 1.12.44a2.43 2.43 0 0 0 1.07-.25l.4-.23v.33H25l.13-.48-.13-.07a.61.61 0 0 1 0-.22c0-.25.07-.43.11-.58zm-2.92-.1a.62.62 0 0 1 .34-.4 2.17 2.17 0 0 1 .57-.15l.29-.05.3-.07v.07a1.24 1.24 0 0 1-.51.75 1.44 1.44 0 0 1-.72.21.34.34 0 0 1-.25-.08.55.55 0 0 1-.02-.28zm7.91-3.68l-1.69 3v-3h-1.8l.39 5.13-.12.19a.8.8 0 0 1-.23.25.64.64 0 0 1-.24.08h-.68l-.39 1.37h.83a2 2 0 0 0 1.29-.34 9.55 9.55 0 0 0 1.27-1.71l3.17-5-1.8.03z"
+                                        fill="#302F82"></path>
+                                </g>
+                            </svg>
+                        </li>
+                        <li class="m-0 p-1">
+                            <svg class="icon icon--full-color" xmlns="http://www.w3.org/2000/svg" role="img"
+                                viewBox="0 0 38 24" width="38" height="24" fill="none" aria-labelledby="pi-visa">
+                                <title id="pi-visa">Visa</title>
+                                <rect x=".5" y=".5" width="37" height="23" rx="2.5" stroke="#000" stroke-opacity=".07"
+                                    fill="none"></rect>
+                                <path
+                                    d="M35 0H3C1.3 0 0 1.3 0 3V21C0 22.7 1.4 24 3 24H35C36.7 24 38 22.7 38 21V3C38 1.3 36.6 0 35 0Z"
+                                    fill="#142FBD"
+                                    style="fill:#142FBD;fill:color(display-p3 0.0784 0.1843 0.7412);fill-opacity:1;">
+                                </path>
+                                <path
+                                    d="M35 1C36.1 1 37 1.9 37 3V21C37 22.1 36.1 23 35 23H3C1.9 23 1 22.1 1 21V3C1 1.9 1.9 1 3 1H35Z"
+                                    fill="#1532CB"
+                                    style="fill:#1532CB;fill:color(display-p3 0.0824 0.1961 0.7961);fill-opacity:1;">
+                                </path>
+                                <path
+                                    d="M29.5944 10.2167H29.2778C28.8556 11.2722 28.5389 11.8 28.2222 13.3833H30.2278C29.9111 11.8 29.9111 11.0611 29.5944 10.2167V10.2167ZM32.6556 16.4444H30.8611C30.7556 16.4444 30.7556 16.4444 30.65 16.3389L30.4389 15.3889L30.3333 15.1778H27.8C27.6944 15.1778 27.5889 15.1778 27.5889 15.3889L27.2722 16.3389C27.2722 16.4444 27.1667 16.4444 27.1667 16.4444H24.95L25.1611 15.9167L28.2222 8.73889C28.2222 8.21111 28.5389 8 29.0667 8H30.65C30.7556 8 30.8611 8 30.8611 8.21111L32.3389 15.0722C32.4444 15.4944 32.55 15.8111 32.55 16.2333C32.6556 16.3389 32.6556 16.3389 32.6556 16.4444V16.4444ZM18.5111 16.1278L18.9333 14.2278C19.0389 14.2278 19.1444 14.3333 19.1444 14.3333C19.8833 14.65 20.6222 14.8611 21.3611 14.7556C21.5722 14.7556 21.8889 14.65 22.1 14.5444C22.6278 14.3333 22.6278 13.8056 22.2056 13.3833C21.9944 13.1722 21.6778 13.0667 21.3611 12.8556C20.9389 12.6444 20.5167 12.4333 20.2 12.1167C18.9333 11.0611 19.3556 9.58333 20.0944 8.84444C20.7278 8.42222 21.0444 8 21.8889 8C23.1556 8 24.5278 8 25.1611 8.21111H25.2667C25.1611 8.84444 25.0556 9.37222 24.8444 10.0056C24.3167 9.79444 23.7889 9.58333 23.2611 9.58333C22.9444 9.58333 22.6278 9.58333 22.3111 9.68889C22.1 9.68889 21.9944 9.79444 21.8889 9.9C21.6778 10.1111 21.6778 10.4278 21.8889 10.6389L22.4167 11.0611C22.8389 11.2722 23.2611 11.4833 23.5778 11.6944C24.1056 12.0111 24.6333 12.5389 24.7389 13.1722C24.95 14.1222 24.6333 14.9667 23.7889 15.6C23.2611 16.0222 23.05 16.2333 22.3111 16.2333C20.8333 16.2333 19.6722 16.3389 18.7222 16.0222C18.6167 16.2333 18.6167 16.2333 18.5111 16.1278V16.1278ZM14.8167 16.4444C14.9222 15.7056 14.9222 15.7056 15.0278 15.3889C15.5556 13.0667 16.0833 10.6389 16.5056 8.31667C16.6111 8.10556 16.6111 8 16.8222 8H18.7222C18.5111 9.26667 18.3 10.2167 17.9833 11.3778C17.6667 12.9611 17.35 14.5444 16.9278 16.1278C16.9278 16.3389 16.8222 16.3389 16.6111 16.3389L14.8167 16.4444ZM5 8.21111C5 8.10556 5.21111 8 5.31667 8H8.90556C9.43333 8 9.85556 8.31667 9.96111 8.84444L10.9111 13.4889C10.9111 13.5944 10.9111 13.5944 11.0167 13.7C11.0167 13.5944 11.1222 13.5944 11.1222 13.5944L13.3389 8.21111C13.2333 8.10556 13.3389 8 13.4444 8H15.6611C15.6611 8.10556 15.6611 8.10556 15.5556 8.21111L12.2833 15.9167C12.1778 16.1278 12.1778 16.2333 12.0722 16.3389C11.9667 16.4444 11.7556 16.3389 11.5444 16.3389H9.96111C9.85556 16.3389 9.75 16.3389 9.75 16.1278L8.06111 9.58333C7.85 9.37222 7.53333 9.05556 7.11111 8.95C6.47778 8.63333 5.31667 8.42222 5.10556 8.42222L5 8.21111Z"
+                                    fill="white" style="fill:white;fill-opacity:1;"></path>
+                            </svg>
+
+                        </li>
+                    </ul>
+                </div>
+                &copy; <span class="currentYear"></span>
+                <span class="brand fw-bold">DHIYA FASHION</span>. All rights reserved.
+            </div>
+            <button type="button" id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top" title="Back to top">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+            </button>
+            <a href="https://wa.me/917719878105?text=Hi%20I%20have%20a%20question" target="_blank" class="whatsappBtn"
+                aria-label="whatsapp" title="whatsapp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="searchBox" tabindex="-1" aria-labelledby="searchBoxLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title fs-5" id="searchBoxLabel">
+                        Search for caps
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="navSearch mx-0" role="search">
+                        <button class="btn p-0 m-0" type="submit" aria-label="Search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input class="form-control ms-3 p-0 bg-transparent border-0" type="search"
+                            placeholder="Type here..." aria-label="Search" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
