@@ -210,3 +210,262 @@ $(document).ready(function () {
     sortIcon.addClass(icons[selectedValue] || "fa-arrow-down-short-wide");
   });
 });
+
+// product area
+
+$(function () {
+  // ==========================================
+  // PRODUCT IMAGE GALLERY
+  // ==========================================
+
+  const $gallery = $(".product-gallery");
+
+  // Prevent errors on pages without a product gallery
+  if (!$gallery.length) return;
+
+  const $track = $gallery.find(".thumbnail-track");
+  const $viewport = $gallery.find(".product-thumbnails");
+  const $mainImage = $gallery.find("#productMainImage");
+  const $prev = $gallery.find(".gallery-prev");
+  const $next = $gallery.find(".gallery-next");
+
+  const $originalThumbs = $track.children(".product-thumb");
+
+  if (
+    !$track.length ||
+    !$viewport.length ||
+    !$mainImage.length ||
+    !$originalThumbs.length
+  ) {
+    return;
+  }
+
+  const totalItems = $originalThumbs.length;
+  const desktopVisibleItems = 5;
+  const mobileVisibleItems = 3;
+
+  let visibleItems = desktopVisibleItems;
+  const animationSpeed = 350;
+
+  let currentIndex = totalItems;
+  let itemSize = 0;
+  let gap = 10;
+  let isMobile = false;
+  let isAnimating = false;
+  let resizeTimer;
+
+  // ==========================================
+  // UPDATE MAIN PRODUCT IMAGE
+  // ==========================================
+
+  function updateMainImage($thumb) {
+    const imageSrc = $thumb.data("image");
+    const imageAlt = $thumb.find("img").attr("alt") || "Product image";
+
+    if (!imageSrc) return;
+
+    $mainImage.attr({
+      src: imageSrc,
+      alt: imageAlt,
+    });
+
+    $originalThumbs.removeClass("active").attr("aria-pressed", "false");
+
+    $thumb.addClass("active").attr("aria-pressed", "true");
+  }
+
+  // ==========================================
+  // RESET THUMBNAIL POSITION
+  // ==========================================
+
+  function setTrackPosition(animate = false) {
+    const offset = currentIndex * (itemSize + gap);
+    const direction = isMobile ? "X" : "Y";
+
+    $track.css({
+      transition: animate ? `transform ${animationSpeed}ms ease` : "none",
+      transform: `translate${direction}(-${offset}px)`,
+    });
+  }
+
+  // ==========================================
+  // INITIALIZE GALLERY
+  // ==========================================
+
+  function initializeGallery() {
+    isMobile = window.innerWidth <= 991;
+    visibleItems = isMobile ? mobileVisibleItems : desktopVisibleItems;
+
+    isAnimating = false;
+
+    // Remove previously created clones
+    $track.children(".clone").remove();
+
+    // Reset original thumbnail styles
+    $originalThumbs.css({
+      width: "",
+      height: "",
+    });
+
+    // Create clones for infinite scrolling
+    if (totalItems > visibleItems) {
+      const $leadingClones = $originalThumbs.clone().addClass("clone").attr({
+        "aria-hidden": "true",
+        tabindex: "-1",
+      });
+
+      const $trailingClones = $originalThumbs.clone().addClass("clone").attr({
+        "aria-hidden": "true",
+        tabindex: "-1",
+      });
+
+      $track.prepend($leadingClones);
+      $track.append($trailingClones);
+    }
+
+    // Get thumbnail spacing
+    gap =
+      parseFloat(isMobile ? $track.css("column-gap") : $track.css("row-gap")) ||
+      10;
+
+    // ======================================
+    // MOBILE / TABLET
+    // ======================================
+
+    if (isMobile) {
+      const viewportWidth = $viewport.width();
+
+      itemSize = (viewportWidth - gap * (visibleItems - 1)) / visibleItems;
+
+      $track.children(".product-thumb").css({
+        width: itemSize + "px",
+        height: itemSize + "px",
+      });
+
+      $viewport.css({
+        height: itemSize + "px",
+      });
+
+      // Change arrows to horizontal
+      $prev.attr("aria-label", "Previous product images");
+      $next.attr("aria-label", "Next product images");
+
+      $prev.find("i").removeClass("fa-chevron-up").addClass("fa-chevron-left");
+
+      $next
+        .find("i")
+        .removeClass("fa-chevron-down")
+        .addClass("fa-chevron-right");
+    }
+
+    // ======================================
+    // DESKTOP
+    // ======================================
+    else {
+      itemSize = 73;
+
+      $track.children(".product-thumb").css({
+        width: "76px",
+        height: itemSize + "px",
+      });
+
+      $viewport.css({
+        width: "76px",
+        height: `${itemSize * visibleItems + gap * (visibleItems - 1)}px`,
+      });
+      // Change arrows to vertical
+      $prev.attr("aria-label", "Previous product images");
+      $next.attr("aria-label", "Next product images");
+
+      $prev.find("i").removeClass("fa-chevron-left").addClass("fa-chevron-up");
+
+      $next
+        .find("i")
+        .removeClass("fa-chevron-right")
+        .addClass("fa-chevron-down");
+    }
+
+    // Show arrows only when needed
+    const hasNavigation = totalItems > visibleItems;
+
+    $prev.toggle(hasNavigation);
+    $next.toggle(hasNavigation);
+
+    // Start at the original first thumbnail
+    currentIndex = totalItems;
+
+    setTrackPosition(false);
+  }
+
+  // ==========================================
+  // INFINITE THUMBNAIL NAVIGATION
+  // ==========================================
+
+  function moveGallery(direction) {
+    if (isAnimating || totalItems <= visibleItems || !itemSize) {
+      return;
+    }
+
+    isAnimating = true;
+
+    currentIndex += direction;
+
+    setTrackPosition(true);
+  }
+
+  // ==========================================
+  // HANDLE INFINITE LOOP
+  // ==========================================
+
+  $track.on("transitionend", function (event) {
+    if (event.target !== $track[0]) return;
+
+    if (currentIndex >= totalItems * 2) {
+      currentIndex = totalItems;
+      setTrackPosition(false);
+    } else if (currentIndex < totalItems) {
+      currentIndex = totalItems * 2 - 1;
+      setTrackPosition(false);
+    }
+
+    isAnimating = false;
+  });
+
+  // ==========================================
+  // THUMBNAIL CLICK
+  // ==========================================
+
+  $gallery.on("click", ".product-thumb:not(.clone)", function () {
+    updateMainImage($(this));
+  });
+
+  // ==========================================
+  // PREVIOUS / NEXT BUTTONS
+  // ==========================================
+
+  $prev.on("click", function () {
+    moveGallery(-1);
+  });
+
+  $next.on("click", function () {
+    moveGallery(1);
+  });
+
+  // ==========================================
+  // INITIALIZE
+  // ==========================================
+
+  initializeGallery();
+
+  // ==========================================
+  // RESPONSIVE RESIZE
+  // ==========================================
+
+  $(window).on("resize", function () {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(function () {
+      initializeGallery();
+    }, 150);
+  });
+});
