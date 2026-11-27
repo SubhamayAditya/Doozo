@@ -342,6 +342,25 @@ header.is-scrolled {
     padding: 5px 0;
 }
 
+.drawer-mobile-bottom a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent-dark);
+    border-radius: 50%;
+    transition: background .2s, border-color .2s;
+    text-decoration: none;
+    color: var(--accent-dark);
+    background-color: #0000001A;
+}
+
+.drawer-mobile-bottom a:hover {
+    background-color: var(--accent-dark);
+    color: var(--line);
+}
+
 /* ---------- Search modal ---------- */
 #searchBox .modal-content {
     border: 0;
@@ -1815,6 +1834,115 @@ header.is-scrolled {
     letter-spacing: 2px;
 }
 
+.single-product-detail-box .product-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0000004D;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.single-product-detail-box .product-price .discount {
+    color: var(--redish);
+    background-color: #FF33331A;
+    border-radius: 62px;
+    font-size: 16px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.single-product-detail-box .feature-box h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+.feature-list {
+    color: var(--muted);
+}
+
+.feature-list li::marker {
+    color: var(--accent);
+}
+
+.count-box {
+    display: flex;
+    background-color: #F0F0F0;
+    height: 52px;
+    width: 180px;
+    justify-content: space-between;
+    border-radius: 62px;
+    overflow: hidden;
+}
+
+.count-box input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border: none !important;
+    max-width: 70px;
+    text-align: center;
+    background-color: #F0F0F0;
+    outline: none;
+}
+
+.count-box button {
+    width: 30%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: font-size 0.15s ease;
+}
+
+.count-box button:hover {
+    background-color: #dddddd;
+    color: var(--accent-dark);
+}
+
+.count-box button:active {
+    font-size: 22px;
+    background-color: #bbb;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.doozoBtn1 {
+    color: #fff;
+    background-color: #000;
+    border-radius: 62px;
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-weight: 700 !important;
+    min-height: 52px;
+    padding: 6px;
+    text-decoration: none;
+    gap: 5px;
+}
+
+.doozoBtn1:hover {
+    color: #000;
+    background-color: var(--accent-dark);
+}
+
 /* ---------- Responsive ---------- */
 
 @media (hover: none) {
@@ -2199,6 +2327,10 @@ header.is-scrolled {
 
     .productHeading {
         font-size: 24px;
+    }
+
+    .count-box {
+        width: 100%;
     }
 }
 

@@ -80,6 +80,18 @@ document.addEventListener("visibilitychange", function () {
   });
 })();
 
+document
+  .querySelectorAll('.navbar .dropdown-toggle[href="all-caps.html"]')
+  .forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      if (window.matchMedia("(min-width: 992px) and (hover: hover)").matches) {
+        event.preventDefault();
+        event.stopPropagation();
+        window.location.assign(link.href);
+      }
+    });
+  });
+
 // Focus the search box when the mobile search modal opens
 $(document).on("shown.bs.modal", "#searchBox", function () {
   $(this).find("input").trigger("focus");
@@ -468,4 +480,24 @@ $(function () {
       initializeGallery();
     }, 150);
   });
+});
+
+$(document).on("click", ".quantity-plus", function () {
+  let input = $(this).siblings('input[type="number"]');
+  let value = parseInt(input.val()) || 1;
+  let max = parseInt(input.attr("max")) || Infinity;
+
+  if (value < max) {
+    input.val(value + 1).trigger("change");
+  }
+});
+
+$(document).on("click", ".quantity-minus", function () {
+  let input = $(this).siblings('input[type="number"]');
+  let value = parseInt(input.val()) || 1;
+  let min = parseInt(input.attr("min")) || 1;
+
+  if (value > min) {
+    input.val(value - 1).trigger("change");
+  }
 });

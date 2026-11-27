@@ -22,19 +22,19 @@
 
 <body>
     <header>
-        <aside class="topHeader" aria-label="Store announcements">
+        <div class="topHeader" role="region" aria-label="Store announcements">
             <span>Welcome to DOOZO</span>
             <span>Available at Amazon</span>
             <span>Easy 7-day returns</span>
             <span>Flat 30% Off</span>
-        </aside>
+        </div>
 
         <nav class="navbar navbar-expand-lg bg-light" aria-label="Main">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./"><img src="assets/images/Icons/logo.png" alt="DOOZO" /></a>
 
 
-                <aside class="mobileDrawer" id="mainMenu" aria-label="Mobile menu">
+                <div class="mobileDrawer" id="mainMenu" aria-label="Mobile menu">
                     <div class="drawerHead">
                         <a class="navbar-brand m-0" href="./"><img src="assets/images/Icons/logo.png" alt="DOOZO" /></a>
                         <button type="button" class="drawerClose" id="menuClose" aria-label="Close menu">
@@ -76,7 +76,16 @@
                                 placeholder="Search for caps" aria-label="Search" />
                         </form>
                     </div>
-                </aside>
+                    <div class="drawer-mobile-bottom d-block d-lg-none">
+                        <div class="d-flex align-items-center justify-content-center border-top py-2 gap-2">
+                            <a href="https://www.instagram.com/doozoindia/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61587192172067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="drawerScrim" id="menuScrim"></div>
 
@@ -111,7 +120,7 @@
                 <div class="mob-nav-box">
                     <button class="navbar-toggler border-0" type="button" id="menuOpen" aria-controls="mainMenu"
                         aria-expanded="false" aria-label="Open menu">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
                     </button>
                     <a href="./" aria-label="Home">
                         <i class="fa-solid fa-house" aria-hidden="true"></i>
@@ -138,7 +147,7 @@
         </nav>
     </header>
 
-    <main class="-mb-1">
+    <main>
         <!-- slider section  -->
         <section class="section-hero">
             <div class="heroSlider mb-0">
@@ -686,7 +695,7 @@
 
                 <div class="testimonials-box position-relative">
                     <div class="testimonial-decoration" aria-hidden="true">
-                        <i class="fa fa-quote-left"></i>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
                     </div>
 
                     <!-- arrows get injected here by slick -->
@@ -697,9 +706,11 @@
                         <article class="testimonial">
                             <div class="testimonial-rating">
                                 <div class="stars d-flex align-items-center" aria-label="5 out of 5 stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
                                 </div>
                                 <span class="rating-number">5.0</span>
                             </div>
@@ -715,7 +726,7 @@
                                 <div class="author-info">
                                     <cite class="author-name">J Doe</cite>
                                     <span class="author-meta">
-                                        <i class="fa fa-check-circle"></i> Verified Purchase · 12
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i> Verified Purchase · 12
                                         March 2026
                                     </span>
                                 </div>
@@ -726,11 +737,11 @@
                         <article class="testimonial">
                             <div class="testimonial-rating">
                                 <div class="stars  d-flex align-items-center" aria-label="4 out of 5 stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="far fa-star" aria-hidden="true"></i>
                                 </div>
                                 <span class="rating-number">4.0</span>
                             </div>
@@ -749,7 +760,7 @@
                                 <div class="author-info">
                                     <cite class="author-name">A Smith</cite>
                                     <span class="author-meta">
-                                        <i class="fa fa-check-circle"></i> Verified Purchase · 2
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i> Verified Purchase · 2
                                         April 2026
                                     </span>
                                 </div>
@@ -762,7 +773,7 @@
         </section>
         <!-- testimonials end -->
         <!-- subscription area  -->
-        <section class="subscription-section bg-black">
+        <section class="subscription-section bg-black border-bottom border-black">
             <div class="container">
                 <div class="subscribe-box bg-dark">
                     <div class="row">
@@ -834,7 +845,7 @@
                         <img src="assets/images/Icons/white_logo.png" alt="DOOZO" class="logo" />
                     </a>
                     <div>
-                        <a target="_blank"
+                        <a target="_blank" rel="noopener noreferrer" aria-label="Shop DOOZO on Amazon"
                             href="https://www.amazon.in/s?rh=n%3A1571271031%2Cp_4%3ADOOZO&ref=bl_sl_s_ap_web_1571271031"
                             class="d-inline-block">
                             <img src="assets/images/amazon.webp" alt="available at amazon"
@@ -987,7 +998,7 @@
                 <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
             </button>
             <a href="https://wa.me/917719878105?text=Hi%20I%20have%20a%20question" target="_blank" class="whatsappBtn"
-                aria-label="whatsapp" title="whatsapp">
+                rel="noopener noreferrer" aria-label="Chat with DOOZO on WhatsApp" title="WhatsApp">
                 <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             </a>
         </div>
@@ -1005,7 +1016,7 @@
                 <div class="modal-body">
                     <form class="navSearch mx-0" role="search">
                         <button class="btn p-0 m-0" type="submit" aria-label="Search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                         </button>
                         <input class="form-control ms-3 p-0 bg-transparent border-0" type="search"
                             placeholder="Type here..." aria-label="Search" />
